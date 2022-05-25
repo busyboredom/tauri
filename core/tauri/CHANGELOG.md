@@ -1,5 +1,12 @@
 # Changelog
 
+## \[1.0.0-rc.14]
+
+- **Breaking change:** `PackageInfo::version` is now a `semver::Version` instead of a `String`.
+  - [2badbd2d](https://www.github.com/tauri-apps/tauri/commit/2badbd2d7ed51bf33c1b547b4c837b600574bd4a) refactor: force semver versions, change updater `should_install` sig ([#4215](https://www.github.com/tauri-apps/tauri/pull/4215)) on 2022-05-25
+- **Breaking change**: `UpdateBuilder::should_update` now takes the current version as a `semver::Version` and a `RemoteRelease` struct, allowing you to check other release fields.
+  - [2badbd2d](https://www.github.com/tauri-apps/tauri/commit/2badbd2d7ed51bf33c1b547b4c837b600574bd4a) refactor: force semver versions, change updater `should_install` sig ([#4215](https://www.github.com/tauri-apps/tauri/pull/4215)) on 2022-05-25
+
 ## \[1.0.0-rc.13]
 
 - Fix `` cannot find macro `message_dialog`  `` error.
